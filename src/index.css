@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+::selection {
+  background-color: #6366f1;
+  color: #fff;
+}
