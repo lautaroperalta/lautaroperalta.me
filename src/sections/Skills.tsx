@@ -3,16 +3,24 @@ import { motion, useInView } from 'framer-motion'
 
 const skillGroups = [
   {
-    category: 'Frontend',
-    skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+    category: 'Lenguajes',
+    skills: ['Python', 'C#', 'JavaScript', 'TypeScript', 'SQL', 'C', 'C++', 'Haskell'],
   },
   {
-    category: 'Backend',
-    skills: ['Node.js', 'Express', 'REST APIs', 'GraphQL', 'PostgreSQL'],
+    category: 'Frameworks',
+    skills: ['ASP.NET', 'Blazor', 'Django', 'React', 'Next.js', 'Express'],
+  },
+  {
+    category: 'Bases de datos',
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'DynamoDB'],
+  },
+  {
+    category: 'Cloud & DevOps',
+    skills: ['AWS Lambda', 'S3', 'API Gateway', 'DynamoDB', 'EC2', 'Docker'],
   },
   {
     category: 'Herramientas',
-    skills: ['Git', 'Docker', 'Vite', 'Jest', 'Figma'],
+    skills: ['Git', 'SVN', 'Slack'],
   },
 ]
 
@@ -21,7 +29,9 @@ export default function Skills() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="skills" className="py-24 px-6 bg-gradient-to-b from-slate-900 to-indigo-950/50">
+    <section id="skills" className="relative py-24 px-6">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/[0.05] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-300/35 to-transparent" />
       <div className="max-w-5xl mx-auto">
         <motion.div
           ref={ref}
@@ -30,7 +40,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <p className="text-indigo-400 font-semibold uppercase tracking-widest text-sm mb-2">
+          <p className="text-indigo-300 font-semibold uppercase tracking-widest text-sm mb-2">
             Skills
           </p>
           <h2 className="text-4xl font-bold text-slate-100">
@@ -38,7 +48,7 @@ export default function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillGroups.map((group, gi) => (
             <motion.div
               key={group.category}
@@ -56,7 +66,7 @@ export default function Skills() {
                     initial={{ opacity: 0, x: -10 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.3, delay: gi * 0.15 + si * 0.07 }}
-                    className="flex items-center gap-2 text-slate-500"
+                    className="flex items-center gap-2 text-slate-400"
                   >
                     <span className="w-2 h-2 bg-indigo-500 rounded-full" />
                     {skill}

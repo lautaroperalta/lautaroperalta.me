@@ -8,7 +8,9 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="projects" className="py-24 px-6 bg-gradient-to-br from-indigo-950/60 via-slate-900 to-violet-950/40">
+    <section id="projects" className="relative py-24 px-6">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/[0.05] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-300/35 to-transparent" />
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -17,7 +19,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <p className="text-indigo-400 font-semibold uppercase tracking-widest text-sm mb-2">
+          <p className="text-indigo-300 font-semibold uppercase tracking-widest text-sm mb-2">
             Proyectos
           </p>
           <h2 className="text-4xl font-bold text-slate-100">
@@ -38,7 +40,7 @@ export default function Projects() {
                 <h3 className="text-xl font-semibold text-slate-100 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed">
                   {project.description}
                 </p>
               </div>
@@ -47,7 +49,7 @@ export default function Projects() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-indigo-600/10 text-indigo-400 border border-indigo-600/20 text-xs font-medium px-3 py-1 rounded-full"
+                    className="bg-indigo-600/10 text-indigo-300 border border-indigo-600/20 text-xs font-medium px-3 py-1 rounded-full"
                   >
                     {tag}
                   </span>
@@ -59,7 +61,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-slate-500 hover:text-indigo-400 text-sm font-medium transition-colors"
+                  className="flex items-center gap-1.5 text-slate-400 hover:text-indigo-300 text-sm font-medium transition-colors"
                 >
                   <Github size={16} />
                   Código
@@ -69,7 +71,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-slate-500 hover:text-indigo-400 text-sm font-medium transition-colors"
+                    className="flex items-center gap-1.5 text-slate-400 hover:text-indigo-300 text-sm font-medium transition-colors"
                   >
                     <ExternalLink size={16} />
                     Demo

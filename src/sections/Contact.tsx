@@ -12,7 +12,9 @@ export default function Contact() {
   const [state, handleSubmit] = useForm('xaqdabaw')
 
   return (
-    <section id="contact" className="relative py-24 px-6 bg-gradient-to-br from-indigo-950/60 via-slate-900 to-violet-950/40 overflow-hidden">
+    <section id="contact" className="relative py-24 px-6 overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/[0.05] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-300/35 to-transparent" />
       {/* Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-indigo-600/10 rounded-full blur-3xl" />
@@ -25,16 +27,12 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <p className="text-indigo-400 font-semibold uppercase tracking-widest text-sm mb-2">
+          <p className="text-indigo-300 font-semibold uppercase tracking-widest text-sm mb-2">
             Contacto
           </p>
           <h2 className="text-4xl font-bold text-slate-100 mb-4">
             Hablemos
           </h2>
-          <p className="text-slate-500 text-lg">
-            ¿Tenés un proyecto en mente o querés trabajar juntos?
-            Escribime y te respondo a la brevedad.
-          </p>
         </motion.div>
 
         <motion.div
@@ -50,7 +48,7 @@ export default function Contact() {
               className="text-center py-8"
             >
               <p className="text-2xl font-semibold text-emerald-400 mb-2">¡Mensaje enviado!</p>
-              <p className="text-slate-500">Te respondo a la brevedad.</p>
+              <p className="text-slate-400">Te respondo a la brevedad.</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -111,14 +109,14 @@ export default function Contact() {
         </motion.div>
 
         {/* Social links */}
-        <div className="flex items-center justify-center gap-6 mt-10 text-slate-600">
-          <a href="mailto:contact@lautaroperalta.me" className="hover:text-indigo-400 transition-colors flex items-center gap-2 text-sm">
+        <div className="flex items-center justify-center gap-6 mt-10 text-slate-400">
+          <a href="mailto:contact@lautaroperalta.me" className="hover:text-indigo-300 transition-colors flex items-center gap-2 text-sm">
             <Mail size={18} /> contact@lautaroperalta.me
           </a>
-          <a href="https://github.com/lautaroperalta" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">
+          <a href="https://github.com/lautaroperalta" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-300 transition-colors">
             <Github size={18} />
           </a>
-          <a href="https://linkedin.com/in/lautaroperalta" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">
+          <a href="https://linkedin.com/in/lautaroperalta" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-300 transition-colors">
             <Linkedin size={18} />
           </a>
         </div>

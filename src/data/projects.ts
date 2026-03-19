@@ -9,34 +9,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'E-Commerce App',
+    title: 'BadReview — Plataforma Web Full Stack',
     description:
-      'Tienda online completa con carrito de compras, autenticación y pasarela de pagos.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    github: 'https://github.com/',
-    demo: 'https://demo.com',
+      'Plataforma colaborativa de reseñas de videojuegos. Participé en backend, API, base de datos, frontend en Blazor y en tareas de deploy/mantenimiento.',
+    tags: ['.NET', 'ASP.NET Core', 'Blazor', 'SQL', 'DevOps'],
+    github: 'https://github.com/BadReview-Org/BadReview',
+    demo: 'https://bad-review.tech',
   },
   {
-    title: 'Operative System',
+    title: 'NachOS — Sistema Operativo para MIPS',
     description:
-      'Aplicación de gestión de tareas con drag & drop, filtros y colaboración en tiempo real.',
-    tags: ['React', 'TypeScript', 'Socket.io', 'MongoDB'],
-    github: 'https://github.com/',
-    demo: 'https://demo.com',
+      'Implementé características fundamentales de sistemas operativos: memoria virtual, filesystem, system calls, sincronización y scheduler de procesos.',
+    tags: ['C++', 'Operating Systems', 'Concurrency', 'MIPS'],
+    github: 'https://github.com/lautaroperalta/NachOS',
   },
   {
-    title: 'Weather Dashboard',
+    title: 'Graphix — DSL de Grafos en Haskell',
     description:
-      'Dashboard del clima con gráficos interactivos y pronóstico de 7 días usando la API de OpenWeather.',
-    tags: ['React', 'Chart.js', 'REST API', 'Tailwind'],
-    github: 'https://github.com/',
-  },
-  {
-    title: 'Blog Platform',
-    description:
-      'Plataforma de blogging con editor de texto enriquecido, tags y sistema de comentarios.',
-    tags: ['Next.js', 'Prisma', 'PostgreSQL', 'TypeScript'],
-    github: 'https://github.com/',
-    demo: 'https://demo.com',
+      'Desarrollé un lenguaje de dominio específico para modelar grafos dirigidos y no dirigidos, incluyendo algoritmos para ciclos Hamiltonianos y caminos Eulerianos.',
+    tags: ['Haskell', 'DSL', 'Graph Theory', 'Backtracking'],
+    github: 'https://github.com/lautaroperalta/graphix',
   },
 ]

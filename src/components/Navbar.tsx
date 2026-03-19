@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navLinks = [
   { label: 'Inicio', to: 'hero' },
   { label: 'Sobre mí', to: 'about' },
+  { label: 'Experiencia', to: 'experience' },
   { label: 'Proyectos', to: 'projects' },
   { label: 'Skills', to: 'skills' },
   { label: 'Contacto', to: 'contact' },
@@ -31,7 +32,7 @@ export default function Navbar() {
         <motion.span
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold text-indigo-400"
+          className="text-xl font-bold text-indigo-300"
         >
           lautaroperalta.me
         </motion.span>
@@ -45,7 +46,7 @@ export default function Navbar() {
                 smooth
                 duration={500}
                 offset={-80}
-                className="text-slate-400 hover:text-indigo-400 cursor-pointer font-medium transition-colors"
+                className="text-slate-400 hover:text-indigo-300 cursor-pointer font-medium transition-colors"
               >
                 {link.label}
               </Link>
@@ -80,7 +81,7 @@ export default function Navbar() {
                     duration={500}
                     offset={-80}
                     onClick={() => setMenuOpen(false)}
-                    className="text-slate-400 hover:text-indigo-400 cursor-pointer font-medium"
+                    className="text-slate-400 hover:text-indigo-300 cursor-pointer font-medium"
                   >
                     {link.label}
                   </Link>
