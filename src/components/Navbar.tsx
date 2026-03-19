@@ -32,9 +32,14 @@ export default function Navbar() {
         <motion.span
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold text-indigo-300"
+          className="flex items-center gap-3 text-sm md:text-xl font-bold text-indigo-300 whitespace-nowrap"
         >
-          lautaroperalta.me
+          <img
+            src="/favicon-32x32.png"
+            alt="Logo de Lautaro Peralta"
+            className="w-8 h-8 md:w-12 md:h-12 rounded-full object-cover border-2 border-indigo-300/50 shadow-[0_0_35px_rgba(99,102,241,0.35)]"
+          />
+          Lautaro Peralta Aguilera
         </motion.span>
 
         {/* Desktop */}
